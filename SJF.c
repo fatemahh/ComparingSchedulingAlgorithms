@@ -64,6 +64,7 @@ void ShortestJobFirst(process processes[], int n)
         ctime += processes[shortest].burst_time;
         processes[shortest].turnaround_time = ctime - processes[shortest].arrival_time;
         processes[shortest].finished = true;
+        processes[shortest].remaining_time = 0;
         remaining = remaining - 1;
     }
 }
